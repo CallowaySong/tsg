@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
-    <meta name="description" content="On March 7th, [place holder]">
-    <title>On March 7th.</title>
+    <meta name="description" content="A personal account concerning Anthony Scott Galloway: non-consensual sexual contact, LSD exposure, and threats of retaliation, as described by the author.">
+    <title>A personal account concerning Anthony Scott Galloway</title>
+    <link rel="canonical" href="https://tonygalloway.com/">
     <link rel="icon" href="data:,">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <style>
       :root {
         color-scheme: dark;
@@ -24,37 +25,178 @@
       body {
         margin: 0;
         min-height: 100vh;
-        min-height: 100svh;
-        display: grid;
-        align-items: center;
-        padding: clamp(24px, 5vw, 80px);
+        padding: clamp(28px, 5vw, 72px) clamp(24px, 6vw, 96px);
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
       }
 
       main {
         width: 100%;
-        min-width: 0;
-        max-width: 1600px;
+        max-width: 1160px;
         margin-inline: auto;
+      }
+
+      .masthead {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid currentColor;
+      }
+
+      .masthead p,
+      .eyebrow {
+        margin: 0;
+        font-size: 0.75rem;
+        line-height: 1.6;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        padding-top: clamp(36px, 5vw, 72px);
+      }
+
+      .eyebrow {
+        margin-bottom: 20px;
       }
 
       h1 {
         margin: 0;
-        font-family: Impact, Anton, "Arial Black", sans-serif;
-        font-size: clamp(3.5rem, 11.5vw, 12rem);
-        font-weight: 400;
-        line-height: 1.08;
-        letter-spacing: -0.025em;
+        font-size: clamp(2.5rem, 8.7vw, 7.2rem);
+        font-weight: 900;
+        line-height: 0.98;
+        letter-spacing: -0.06em;
         text-transform: uppercase;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      .dek {
+        max-width: 40ch;
+        margin: 28px 0 0;
+        font-size: clamp(1.2rem, 2.3vw, 1.8rem);
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+      }
+
+      .date-line {
+        margin: 20px 0 0;
+        font-size: 0.875rem;
+        line-height: 1.8;
+        font-weight: 500;
+      }
+
+      .contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+        margin-top: 32px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-underline-offset: 0.3em;
+        text-decoration-thickness: 1px;
+      }
+
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+
+      a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 5px;
+      }
+
+      .account {
+        max-width: 68ch;
+        margin-top: clamp(56px, 7vw, 96px);
+        font-size: clamp(1rem, 1.3vw, 1.1875rem);
+        line-height: 1.75;
+        letter-spacing: -0.01em;
         overflow-wrap: anywhere;
       }
 
-      .line {
-        display: block;
+      .account section {
+        margin-top: 48px;
+        padding-top: 28px;
+        border-top: 1px solid currentColor;
+        scroll-margin-top: 24px;
+      }
+
+      .account section:first-child {
+        margin-top: 0;
+      }
+
+      h2 {
+        margin: 0 0 22px;
+        font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: -0.035em;
+      }
+
+      .account p,
+      .closing p {
+        margin: 0;
+      }
+
+      .account p + p {
+        margin-top: 1.2em;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      .account .key-line {
+        margin-top: 24px;
+        padding-left: 20px;
+        border-left: 3px solid currentColor;
+        font-size: clamp(1.2rem, 2.6vw, 1.65rem);
+        line-height: 1.5;
+        letter-spacing: -0.025em;
+      }
+
+      .closing {
+        max-width: 32ch;
+        margin-top: clamp(64px, 8vw, 104px);
+        padding-top: 32px;
+        border-top: 1px solid currentColor;
+        font-size: clamp(1.75rem, 3.8vw, 3.4rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.045em;
+        overflow-wrap: anywhere;
+      }
+
+      .closing p + p {
+        margin-top: 0.7em;
       }
 
       ::selection {
         color: #000;
         background: #fff;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: clamp(2rem, 11.8vw, 4.5rem);
+          line-height: 1.02;
+          letter-spacing: -0.05em;
+        }
+
+        .account {
+          line-height: 1.7;
+        }
       }
 
       @media print {
@@ -65,17 +207,94 @@
 
         body {
           min-height: auto;
+          padding: 0;
+        }
+
+        .contents {
+          display: none;
+        }
+
+        h1 {
+          font-size: 44pt;
+        }
+
+        .account {
+          font-size: 11pt;
+        }
+
+        h2 {
+          break-after: avoid;
+        }
+
+        .closing {
+          font-size: 24pt;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <!-- Edit these two lines to change the statement. -->
-      <h1>
-        <span class="line">On March 7th,</span>
-        <span class="line">[place holder]</span>
-      </h1>
+    <main aria-labelledby="statement-title">
+      <!-- Edit the heading, summary, and paragraphs below to update the statement. -->
+      <div class="masthead">
+        <p>Personal statement</p>
+        <p>Author’s name withheld for safety and privacy</p>
+      </div>
+
+      <header class="hero">
+        <p class="eyebrow">My account concerning</p>
+        <h1 id="statement-title">
+          <span>Anthony</span>
+          <span>Scott Galloway</span>
+        </h1>
+        <p class="dek">My account of <strong>non-consensual sexual contact</strong>, <strong>LSD exposure</strong>, and <strong>threats of retaliation</strong>.</p>
+        <p class="date-line">Three occasions he later described to me: <time datetime="2026-06-22">June 22</time> · <time datetime="2026-09-18">September 18</time> · <time datetime="2026-10-10">October 10, 2026</time></p>
+        <nav class="contents" aria-label="Statement sections">
+          <a href="#incidents">The incidents</a>
+          <a href="#lsd">LSD and subsequent accounts</a>
+          <a href="#threats">Threats</a>
+          <a href="#consent">Consent</a>
+        </nav>
+      </header>
+
+      <article class="account" aria-label="The author’s personal account">
+        <section id="incidents" aria-labelledby="incidents-title">
+          <h2 id="incidents-title">The three occasions I learned about afterward</h2>
+          <p>I am making this statement concerning non-consensual sexual contact involving <strong>Anthony Scott Galloway</strong>. June 22, September 18, and October 10, 2026 are the three dates I know about because <strong>he mentioned the sexual contact to me the following day</strong>. He said he thought I would wake up.</p>
+          <p>I was <strong>coerced into taking bromazepam and triazolam</strong> and consuming substantial quantities of alcohol mixed with Diet Coke. While I was under the effects of these substances, he performed sexual acts involving my penis <strong>without my consent</strong>.</p>
+          <p class="key-line"><strong>I did not freely agree to this sexual contact.</strong></p>
+          <p>On other occasions, I woke without underwear, with semen on my abdomen and feces on my penis. <strong>I cannot give a complete account of what occurred while I was asleep or sedated on those occasions.</strong></p>
+          <p>I am speaking about these experiences in my own words and on my own terms.</p>
+        </section>
+
+        <section id="lsd" aria-labelledby="lsd-title">
+          <h2 id="lsd-title">LSD and the accounts given to others</h2>
+          <p>I have bipolar disorder and take lithium. My account is that he <strong>added LSD to my vodka drink without my knowledge or consent</strong>. I experienced a psychotic episode after consuming the drink.</p>
+          <p class="key-line"><strong>I did not knowingly or voluntarily take LSD.</strong></p>
+          <p>He also asked me, in front of other people, why I had taken LSD. I struggled to respond in the moment because the question assumed I had chosen to take it.</p>
+          <p>The police told me that he had handed over LSD tabs and claimed to have found them <strong>between photocards in my journal</strong>, saying that I had hidden them there.</p>
+          <p>My sister told me that he had claimed I took an LSD tab voluntarily. <strong>I dispute that account of voluntary use.</strong></p>
+        </section>
+
+        <section id="threats" aria-labelledby="threats-title">
+          <h2 id="threats-title">Threats and fear of retaliation</h2>
+          <p>He has repeatedly threatened to report me for domestic violence <strong>if I disclose the non-consensual sexual contact I have described</strong>, and has said he would have me indicted.</p>
+          <p>His accusations include attempted stabbing and pinning him against a wall. He showed me small puncture marks on the door and dents in the wall and said I had caused them. He also accused me of trying to bite him.</p>
+          <p><strong>I am uncertain whether I caused the damage.</strong> That uncertainty does not change my account that I did not knowingly or voluntarily take LSD.</p>
+          <p>I am concerned about retaliation if I report the non-consensual sexual contact. These threats have made me fear for my education and future.</p>
+        </section>
+
+        <section id="consent" aria-labelledby="consent-title">
+          <h2 id="consent-title">Consent</h2>
+          <p>Consent must be <strong>freely given and exist at the time of sexual activity</strong>.</p>
+          <p class="key-line"><strong>Coerced compliance is not consent. Consent cannot be supplied retrospectively.</strong></p>
+          <p>I am withholding my name from this public statement out of concern for my safety and privacy. I ask that my identity not be disclosed or speculated about publicly.</p>
+        </section>
+      </article>
+
+      <footer class="closing" aria-label="Closing statement">
+        <p>I refuse to stay silent any longer.</p>
+        <p>I refuse to let this man make me hate my own body.</p>
+      </footer>
     </main>
   </body>
 </html>
